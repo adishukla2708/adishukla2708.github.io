@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Monochrome Theme Colors */
+  --primary-color: #1c1c1c;
+  --secondary-color: #6b6b6b;
+  --text-dark: #121212;
+  --text-light: #5e5e5e;
+  --bg-light: #f2f2f2;
+  --bg-gray: #e7e7e7;
+  --border-color: #cfcfcf;
+
+  /* Dark Mode Colors */
+  --dark-bg: #0c0c0c;
+  --dark-bg-secondary: #1a1a1a;
+  --dark-text: #f2f2f2;
+  --dark-text-light: #b6b6b6;
+  --dark-primary: #d0d0d0;
+  --dark-secondary: #8a8a8a;
+
+  /* Shadows */
+  --shadow-soft: rgba(0, 0, 0, 0.12);
+  --shadow-strong: rgba(0, 0, 0, 0.3);
+  --shadow-dark: rgba(0, 0, 0, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+code {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}

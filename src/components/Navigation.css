@@ -1,0 +1,149 @@
+.navbar {
+  background-color: var(--bg-light);
+  box-shadow: 0 2px 8px var(--shadow-soft);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.dark-mode .navbar {
+  background-color: var(--dark-bg-secondary);
+  box-shadow: 0 2px 8px var(--shadow-dark);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  min-width: 40px;
+}
+
+.dark-mode .nav-logo {
+  color: var(--dark-primary);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.dark-mode .nav-link {
+  color: var(--dark-text-light);
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.dark-mode .nav-link:hover {
+  color: var(--dark-primary);
+}
+
+.nav-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-gray);
+}
+
+.dark-mode .theme-toggle:hover {
+  background-color: var(--dark-bg);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-dark);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .hamburger span {
+  background-color: var(--dark-text);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-light);
+    flex-direction: column;
+    gap: 0;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 8px 16px var(--shadow-soft);
+  }
+
+  .dark-mode .nav-menu {
+    background-color: var(--dark-bg-secondary);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 12px 0;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .dark-mode .nav-link {
+    border-bottom-color: var(--dark-bg);
+  }
+
+  .nav-container {
+    padding: 0 15px;
+  }
+}

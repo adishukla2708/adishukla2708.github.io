@@ -1,0 +1,146 @@
+.projects {
+  background-color: var(--bg-gray);
+}
+
+.dark-mode .projects {
+  background-color: var(--dark-bg-secondary);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: var(--bg-light);
+  border-radius: 12px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.dark-mode .project-card {
+  background-color: var(--dark-bg);
+  border-color: var(--dark-bg-secondary);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px var(--shadow-soft);
+  border-color: var(--primary-color);
+}
+
+.dark-mode .project-card:hover {
+  box-shadow: 0 15px 40px var(--shadow-dark);
+  border-color: var(--dark-primary);
+}
+
+.project-header {
+  margin-bottom: 15px;
+}
+
+.project-header h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+.dark-mode .project-header h3 {
+  color: var(--dark-text);
+}
+
+.project-description {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.dark-mode .project-description {
+  color: var(--dark-text-light);
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tech-tag {
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--primary-color);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.dark-mode .tech-tag {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--dark-primary);
+}
+
+.project-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.dark-mode .project-link {
+  color: var(--dark-primary);
+}
+
+.project-link:hover {
+  gap: 10px;
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+
+  .project-header h3 {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 0.85rem;
+  }
+
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}

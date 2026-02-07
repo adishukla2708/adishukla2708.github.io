@@ -1,0 +1,130 @@
+.tech-stack {
+  background-color: var(--bg-light);
+}
+
+.dark-mode .tech-stack {
+  background-color: var(--dark-bg);
+}
+
+.tech-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.tech-category {
+  padding: 30px;
+  background-color: var(--bg-gray);
+  border-radius: 12px;
+  border-top: 4px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.dark-mode .tech-category {
+  background-color: var(--dark-bg-secondary);
+  border-top-color: var(--dark-primary);
+}
+
+.tech-category:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px var(--shadow-soft);
+}
+
+.category-title {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.dark-mode .category-title {
+  color: var(--dark-text);
+}
+
+.tech-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  color: var(--text-light);
+  padding: 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.dark-mode .tech-item {
+  color: var(--dark-text-light);
+}
+
+.tech-item:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+  transform: translateX(5px);
+}
+
+.dark-mode .tech-item:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.tech-icon {
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.dark-mode .tech-icon {
+  color: var(--dark-primary);
+}
+
+.tech-name {
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tech-categories {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+
+  .tech-category {
+    padding: 20px;
+  }
+
+  .category-title {
+    font-size: 1.1rem;
+  }
+
+  .tech-item {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-categories {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tech-category {
+    padding: 15px;
+  }
+
+  .category-title {
+    font-size: 1rem;
+  }
+
+  .tech-item {
+    font-size: 0.9rem;
+    gap: 10px;
+  }
+
+  .tech-list {
+    gap: 10px;
+  }
+}
